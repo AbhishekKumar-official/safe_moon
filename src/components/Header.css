@@ -1,0 +1,15 @@
+header{
+    background-color: rgba(254, 107, 139, .3);
+    height: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -3,9 +3,11 @@ import "./Header.css"
 class Header extends Component {
   render() {
     return (
-      <div>
-        
-      </div>
+      <header>
+        <div className="container">
+          THE OFFICIAL HOME OF SAFEMOON
+        </div>
+      </header>
     )
   }
 }
