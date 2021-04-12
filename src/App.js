@@ -15,7 +15,7 @@ export class App extends Component {
                 value: 50,
               },
               color: {
-                value: theme === "dark" ? "#262C43" : "#cccccc",
+                value: "#cccccc",
               },
               shape: {
                 type: "circle",
