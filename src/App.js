@@ -3,25 +3,26 @@ import { Route, Switch } from "react-router-dom"
 import Particles from "react-particles-js"
 import Header from "./components/Header"
 import Home from "./components/Home"
+import "./App.css"
 export class App extends Component {
   render() {
     return (
       <div>
-        {/* <Particles
+        <Particles
           id="particles-js"
           params={{
             particles: {
               number: {
-                value: 50,
+                value: 30,
               },
               color: {
-                value: "#cccccc",
+                value: "#fe6b8b",
               },
               shape: {
                 type: "circle",
               },
               opacity: {
-                value: 0.5,
+                value: 0.2,
               },
               size: {
                 value: 7,
@@ -31,15 +32,17 @@ export class App extends Component {
                 color: "#262C43",
               },
               move: {
-                speed: 4,
+                speed: 2,
               },
             },
           }}
-        /> */}
-        <Header />
-        <Switch>
-          <Route exact path="/" component={Home} />
-        </Switch>
+        />
+        <div className="wrapper">
+          <Header />
+          <Switch>
+            <Route exact path="/" component={Home} />
+          </Switch>
+        </div>
       </div>
     )
   }
