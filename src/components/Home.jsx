@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import logo from "../images/logo.svg"
 import graph from "../images/graph.png"
+import rocket from "../images/rocket.svg"
+import barchart from "../images/bar-chart.svg"
+import piechart from "../images/pie-chart.svg"
+import arrowleft from "../images/arrow-left.svg"
 import "./Home.css"
 class Home extends Component {
   render() {
@@ -36,61 +40,95 @@ class Home extends Component {
         </div>
       </nav>
       <div className="hero-section">
-        <img src={logo} />
-        <h1>Safex-007 Protocol</h1>
-        <h3>Safely to the Moon</h3>
+        <div>
+          <img src={logo} />
+          <span>
+            <h1>Safex-007 Protocol</h1>
+            <h3>Safely to the Moon</h3>
+          </span>
+        </div>
       </div>
       <div className="live-chart">
-        <ul>
-            <li>
-              <span>$ 0.000000757</span>
-              <small>Value</small>
-            </li>
-            <li>
-              <span>$ 0.000000757</span>
-              <small>Value</small>
-            </li>
-            <li>
-              <span>$ 0.000000757</span>
-              <small>Value</small>
-            </li>
-            <li>
-              <span>$ 0.000000757</span>
-              <small>Value</small>
-            </li>
-            <li>
-              <span>$ 0.000000757</span>
-              <small>Value</small>
-            </li>
-          </ul>
+        <div className="container">
+          <div className="row">
+            <span>
+              <div className="dollar">$</div>
+              <div className="content-value">
+                0.000000757
+                <small>Value</small>
+              </div>
+            </span>
+            <span>
+              <div className="dollar">$</div>
+              <div className="content-value">
+                0.000000757
+                <small>Value</small>
+              </div>
+            </span>
+            <span>
+              <div className="dollar">$</div>
+              <div className="content-value">
+                0.000000757
+                <small>Value</small>
+              </div>
+            </span>
+          </div>
+          <div className="row">
+            <span>
+              <div className="dollar">$</div>
+              <div className="content-value">
+                0.000000757
+                <small>Value</small>
+              </div>
+            </span>
+            <span>
+              <div className="dollar">$</div>
+              <div className="content-value">
+                0.000000757
+                <small>Value</small>
+              </div>
+            </span>
+          </div>
+        </div>
       </div>
-      <div className="content">
+      <div className="content bg-light text-center">
         <div className="container">
           <h1>Safex-007 Protocol</h1>
           <p>Static Rewards, LP Acquisition, Manual Burn<br/><br/>
-          A common misconception with the heavy APY average is the
-  subjectivity of the impermanent loss from staking an LP (liquidity
-  provider) in a farming reward generator. With the explosion of DeFi
-  we have seen too many new cryptocurrency prospectors get sucked into a
-  high APY LP-farming trap, feeling hopeless as they are pushed out by earlier
-  buyers with higher staking rewards. We’ve all been there, seeing those shiny
-  6 digit figures can be pretty damn tempting to jump in. However, almost
-  always the token suffers from the inevitable valuation bubble, which is then
-  followed by the burst and the impending collapse of the price. This Is why we
-  have seen the mass adoption of static rewards, also known as reflection, a
-  separate concept that seeks to eliminate the troubles caused by farming
-  rewards.</p>
-  <h1>Why Static?</h1>
-  <p>Static rewards solve a host of problems. First, the reward amount is
-conditional upon the volume of the token being traded. This mechanism aims
-to alleviate some of the downward sell pressure put on the token caused by
-earlier adopters selling their tokens after farming crazy high APY’s. Second,
-the reflect mechanism encourages holders to hang onto their tokens to
-garner higher kick-backs which are based upon a percentages carried out
-and dependant upon the total tokens held by the owner.</p>
+            A common misconception with the heavy APY average is the
+    subjectivity of the impermanent loss from staking an LP (liquidity
+    provider) in a farming reward generator. With the explosion of DeFi
+    we have seen too many new cryptocurrency prospectors get sucked into a
+    high APY LP-farming trap, feeling hopeless as they are pushed out by earlier
+    buyers with higher staking rewards. We’ve all been there, seeing those shiny
+    6 digit figures can be pretty damn tempting to jump in. However, almost
+    always the token suffers from the inevitable valuation bubble, which is then
+    followed by the burst and the impending collapse of the price. This Is why we
+    have seen the mass adoption of static rewards, also known as reflection, a
+    separate concept that seeks to eliminate the troubles caused by farming
+    rewards.</p>
         </div>
-        <div className="container flex-content mb-2">
-          <div className="content-left">
+      </div>
+      <div className="content text-center">
+        <div className="container">
+          <div className="bg-img">
+            <img src={rocket} />
+          </div>
+          <h1>Why Static?</h1>
+          <p>Static rewards solve a host of problems. First, the reward amount is
+          conditional upon the volume of the token being traded. This mechanism aims
+          to alleviate some of the downward sell pressure put on the token caused by
+          earlier adopters selling their tokens after farming crazy high APY’s. Second,
+          the reflect mechanism encourages holders to hang onto their tokens to
+          garner higher kick-backs which are based upon a percentages carried out
+          and dependant upon the total tokens held by the owner.</p>
+          </div>
+        </div>
+        <div className="content content-chart">
+        <div className="container">
+          <div className="chart-wrap">
+          <div className="chart-content">
+            <img src={barchart} />
             <h1>Manual Burns</h1>
             <p>Sometimes burns matter; sometimes they don’t. A continuous burn on any
 one protocol can be nice in the early days, however, this means the burn
@@ -103,23 +141,29 @@ Furthermore, the total number of Safex-007 burned is featured on our
 readout located on the website which allows for further transparency in
 identifying the current circulating supply at any given point of time.</p>
           </div>
-          <div className="content-right">
-            <img src={graph} />
-          </div>
-        </div>
-        <div className="container flex-content">
-        <div className="content-right flex-column">
-            <img src={graph} />
-            <div className="d-flex mt-1">
-              <small className="text-pink"><b className="text-orange">Total Supply:</b> 1,000,000,000,000,000</small>
-              <small className="text-pink"><b className="text-orange">Burned Dev Tokens:</b> 223,000,000,000,000</small>
-              <small className="text-pink"><b className="text-orange">Fair Launch Supply:</b> 777,000,000,000,000</small>
+          <div className="chart-content-two">
+            <div className="row">
+              <span>
+              1,000,000,000,000,000
+                  <small>Total Supply</small>
+              </span>
+              <span>
+              223,000,000,000,000
+                  <small>Burned Dev Tokens</small>
+              </span>
+            </div>
+            <div className="row">
+              <span>
+              777,000,000,000,000
+                  <small>Fair Launch Supply</small>
+              </span>
             </div>
           </div>
-          <div className="content-left">
+          </div>
+          <div className="chart-content">
+            <img src={piechart} />
             <h1>Automatic Liquidity Pool (LP)</h1>
-            <p>
-Automatic LP is the secret sauce of Safex-007. Here we have a function
+            <p>Automatic LP is the secret sauce of Safex-007. Here we have a function
 that acts as a two-fold beneficial implementation for holders. First, the
 contract sucks up tokens from sellers and buyers alike, and adds them to the
 LP creating a solid price floor. Second, the penalty acts as an arbitrage
@@ -136,67 +180,77 @@ game, which keeps the price from fluctuating as much as if there was no
 automatic LP function. All of this is an effort to alleviate some of the
 troubles we have seen with the current DeFi reflection tokens. We are
 confident that this model and protocol will prevail over the outdated
-reflection tokens for these reasons</p>
+reflection tokens for these reasons.</p>
+          <div className="arrow-left">
+            <img src={arrowleft} />
+          </div>
           </div>
         </div>
+        </div>
+        <div className="content text-center">
         <div className="container">
           <h1>Safex-007 Protocol</h1>
           <p>Safex-007 employs 3 simple functions: Reflection + LP acquisition + Burn
-In each trade, the transaction is taxed a 10% fee, which is split 2 ways.</p>
+In each trade,<br/> 
+the transaction is taxed a 10% fee, which is split 2 ways.</p>
           <ul>
-            <li>5% fee = redistributed to all existing holders</li>
-            <li>5% fee is split 50/50 half of which is sold by the contract into BNB, while
+            <li>
+              <span className="count">1</span>
+              5% fee = redistributed to all existing holders
+            </li>
+            <li>
+            <span className="count">2</span>
+            5% fee is split 50/50 half of which is sold by the contract into BNB, while
 the other half of the Safex-007 tokens are paired automatically with the
-previously mentioned BNB and added as a liquidity pair on Pancake Swap.</li>
+previously mentioned BNB and added as a liquidity pair on Pancake Swap.
+          </li>
           </ul>
-          <h1>Safety</h1>
-          <p>Step by step plan to ensure 100% safety.</p>
         </div>
       </div>
-      <div className="steps">
+      <div className="content bg-light text-center">
         <div className="container">
-          <div className="background background-one">
-            <div className="head">
-              <span>1</span>
-              Step
-            </div>
+        <h1>Safety</h1>
+          <p>Step by step plan to ensure 100% safety.</p>
+      <div className="steps">
+        <div className="background">
             <div className="body">
               <svg class="svg-inline--fa fa-burn fa-w-12 fa-3x" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="burn" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M192 0C79.7 101.3 0 220.9 0 300.5 0 425 79 512 192 512s192-87 192-211.5c0-79.9-80.2-199.6-192-300.5zM98.9 385.2c0-13.3 4.2-61.2 93.1-161.2 88.9 100 93.1 147.9 93.1 161.2 0 48.5-28.9 84.1-72.4 92.7-6.8.8-13.5 2.1-20.7 2.1s-13.9-1.2-20.7-2.1c-43.5-8.5-72.4-44.2-72.4-92.7zm212 39.7c3.7-12.4 6.2-25.5 6.2-39.7 0-80.9-112.7-195.5-125.1-209.4-12.9 14.5-125.1 128.6-125.1 209.4 0 14.2 2.5 27.3 6.2 39.7-25.8-31.3-41.1-74-41.1-124.4 0-90.8 122.6-215.8 160-251.9 37.4 36 160 161.1 160 251.9 0 50.4-15.3 93.1-41.1 124.4z"></path></svg>
               Dev burned all tokens in Dev Wallet prior to launch
             </div>
-          </div>
-          <div className="background background-two">
-            <div className="head">
-              <span>2</span>
-              Step
+            <div className="foot">
+              <span>Step 1</span>
             </div>
+          </div>
+          <div className="background">
             <div className="body">
             <svg class="svg-inline--fa fa-balance-scale fa-w-20 fa-3x" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="balance-scale" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M634.4 279.09L525.35 103.12C522.18 98.38 517.09 96 512 96s-10.18 2.38-13.35 7.12L389.6 279.09c-3.87 5.78-6.09 12.72-5.51 19.64C389.56 364.4 444.74 416 512 416s122.44-51.6 127.91-117.27c.58-6.92-1.64-13.86-5.51-19.64zM512 384c-41.58 0-77.55-27.13-90.78-64h181.2C589 357.23 553.28 384 512 384zm-90.27-96l90.31-145.76L602.98 288H421.73zM536 480H336V125.74c27.56-7.14 48-31.95 48-61.74h152c4.42 0 8-3.58 8-8V40c0-4.42-3.58-8-8-8H374.89c-.15-.26-4.37-11.11-19.11-21.07C345.57 4.03 333.25 0 320 0s-25.57 4.03-35.78 10.93c-14.74 9.96-18.96 20.81-19.11 21.07H104c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h152c0 29.79 20.44 54.6 48 61.74V480H104c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h432c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zM288 64c0-17.67 14.33-32 32-32s32 14.33 32 32-14.33 32-32 32-32-14.33-32-32zm-32.09 234.73c.58-6.92-1.64-13.86-5.51-19.64L141.35 103.12C138.18 98.38 133.09 96 128 96s-10.18 2.38-13.35 7.12L5.6 279.09c-3.87 5.78-6.09 12.72-5.51 19.64C5.56 364.4 60.74 416 128 416s122.44-51.6 127.91-117.27zM128.04 142.24L218.98 288H37.73l90.31-145.76zM37.22 320h181.2C205 357.23 169.28 384 128 384c-41.58 0-77.55-27.13-90.78-64z"></path></svg>
             Fair launch on DxSale
             </div>
-          </div>
-          <div className="background background-three">
-            <div className="head">
-              <span>3</span>
-              Step
+            <div className="foot">
+              <span>Step 2</span>
             </div>
+          </div>
+          <div className="background">
             <div className="body">
             <svg class="svg-inline--fa fa-lock-alt fa-w-14 fa-3x" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="lock-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224 420c-11 0-20-9-20-20v-64c0-11 9-20 20-20s20 9 20 20v64c0 11-9 20-20 20zm224-148v192c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V272c0-26.5 21.5-48 48-48h16v-64C64 71.6 136-.3 224.5 0 312.9.3 384 73.1 384 161.5V224h16c26.5 0 48 21.5 48 48zM96 224h256v-64c0-70.6-57.4-128-128-128S96 89.4 96 160v64zm320 240V272c0-8.8-7.2-16-16-16H48c-8.8 0-16 7.2-16 16v192c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16z"></path></svg>
             LP locked on DxLocker for 4 years
             </div>
-          </div>
-          <div className="background background-four">
-            <div className="head">
-              <span>4</span>
-              Step
+            <div className="foot">
+              <span>Step 3</span>
             </div>
+          </div>
+          <div className="background">
             <div className="body">
             <svg class="svg-inline--fa fa-coins fa-w-16 fa-3x" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="coins" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M336 32c-48.6 0-92.6 9-124.5 23.4-.9.4-51.5 21-51.5 56.6v16.7C76.1 132.2 0 163.4 0 208v192c0 44.2 78.8 80 176 80s176-35.8 176-80v-16.4c89.7-3.7 160-37.9 160-79.6V112c0-37-62.1-80-176-80zm-16 368c0 13.9-50.5 48-144 48S32 413.9 32 400v-50.1c31.8 20.6 84.4 34.1 144 34.1s112.2-13.5 144-34.1V400zm0-96c0 13.9-50.5 48-144 48S32 317.9 32 304v-50.1c31.8 20.6 84.4 34.1 144 34.1s112.2-13.5 144-34.1V304zm-144-48c-81 0-146.7-21.5-146.7-48S95 160 176 160s146.7 21.5 146.7 48S257 256 176 256zm304 48c0 13.1-45 43.6-128 47.3v-64.1c52.8-2.2 99.1-14.6 128-33.3V304zm0-96c0 13.1-45.1 43.4-128 47.2V208c0-5.6-1.7-11-4.1-16.3 54.6-1.7 102.4-14.5 132.1-33.8V208zm-144-48c-7.3 0-14-.5-20.9-.9-36.9-21.7-85-28.2-115.6-30-6.3-5.3-10.1-11-10.1-17.1 0-26.5 65.7-48 146.7-48s146.7 21.5 146.7 48S417 160 336 160z"></path></svg>
             LP generated with every trade and locked on Pancake
             </div>
+            <div className="foot">
+              <span>Step 4</span>
+            </div>
           </div>
-        </div>
       </div>
+      </div>
+        </div>
       <div className="timeline">
         <div className="container flex-column">
           <h1>Road Map</h1>
