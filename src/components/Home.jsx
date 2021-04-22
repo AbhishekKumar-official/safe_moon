@@ -36,14 +36,19 @@ class Home extends Component {
               <a href="javascript:void(0)">Our Team</a>
             </li>
           </ul>
-          <button className="btn-effect">Buy Now</button>
+          <div className="d-flex">
+            <button className="btn-effect btn-media-screen">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path></svg>
+            </button>
+            <button className="btn-effect">Buy Now</button>
+          </div>
         </div>
       </nav>
       <div className="hero-section">
         <div>
           <img src={logo} />
           <span>
-            <h1>Safex-007 Protocol</h1>
+            <h1>Safex-007<br/> Protocol</h1>
             <h3>Safely to the Moon</h3>
           </span>
         </div>
@@ -141,7 +146,7 @@ Furthermore, the total number of Safex-007 burned is featured on our
 readout located on the website which allows for further transparency in
 identifying the current circulating supply at any given point of time.</p>
           </div>
-          <div className="chart-content-two">
+          <div className="chart-content-two media-screen-none">
             <div className="row">
               <span>
               1,000,000,000,000,000
@@ -160,39 +165,58 @@ identifying the current circulating supply at any given point of time.</p>
             </div>
           </div>
           </div>
-          <div className="chart-content">
-            <img src={piechart} />
-            <h1>Automatic Liquidity Pool (LP)</h1>
-            <p>Automatic LP is the secret sauce of Safex-007. Here we have a function
-that acts as a two-fold beneficial implementation for holders. First, the
-contract sucks up tokens from sellers and buyers alike, and adds them to the
-LP creating a solid price floor. Second, the penalty acts as an arbitrage
-resistant mechanism that secures the volume of Safex-007 as a reward
-for the holders. In theory, the added LP creates a stability from the supplied
-LP by adding the tax to the overall liquidity of the token, thus increasing the
-tokens overall LP and supporting the price floor of the token. This is
-different from the burn function of other reflection tokens which is only
-beneficial in the short term from the granted reduction of supply. As the
-Safex-007 token LP increases, the price stability mirrors this function with
-the benefit of a solid price floor and cushion for holders. The goal here is to
-prevent the larger dips when whales decide to sell their tokens later in the
-game, which keeps the price from fluctuating as much as if there was no
-automatic LP function. All of this is an effort to alleviate some of the
-troubles we have seen with the current DeFi reflection tokens. We are
-confident that this model and protocol will prevail over the outdated
-reflection tokens for these reasons.</p>
-          <div className="arrow-left">
-            <img src={arrowleft} />
+          <div className="chart-wrap">
+            <div className="chart-content">
+              <img src={piechart} />
+              <h1>Automatic Liquidity Pool (LP)</h1>
+              <p>Automatic LP is the secret sauce of Safex-007. Here we have a function
+  that acts as a two-fold beneficial implementation for holders. First, the
+  contract sucks up tokens from sellers and buyers alike, and adds them to the
+  LP creating a solid price floor. Second, the penalty acts as an arbitrage
+  resistant mechanism that secures the volume of Safex-007 as a reward
+  for the holders. In theory, the added LP creates a stability from the supplied
+  LP by adding the tax to the overall liquidity of the token, thus increasing the
+  tokens overall LP and supporting the price floor of the token. This is
+  different from the burn function of other reflection tokens which is only
+  beneficial in the short term from the granted reduction of supply. As the
+  Safex-007 token LP increases, the price stability mirrors this function with
+  the benefit of a solid price floor and cushion for holders. The goal here is to
+  prevent the larger dips when whales decide to sell their tokens later in the
+  game, which keeps the price from fluctuating as much as if there was no
+  automatic LP function. All of this is an effort to alleviate some of the
+  troubles we have seen with the current DeFi reflection tokens. We are
+  confident that this model and protocol will prevail over the outdated
+  reflection tokens for these reasons.</p>
+            <div className="arrow-left">
+              <img src={arrowleft} />
+            </div>
+            </div>
+            <div className="chart-content-two media-screen-block">
+            <div className="row">
+              <span>
+              1,000,000,000,000,000
+                  <small>Total Supply</small>
+              </span>
+              <span>
+              223,000,000,000,000
+                  <small>Burned Dev Tokens</small>
+              </span>
+            </div>
+            <div className="row">
+              <span>
+              777,000,000,000,000
+                  <small>Fair Launch Supply</small>
+              </span>
+            </div>
           </div>
           </div>
         </div>
         </div>
-        <div className="content text-center">
+        <div className="content text-center content-fuctions">
         <div className="container">
           <h1>Safex-007 Protocol</h1>
           <p>Safex-007 employs 3 simple functions: Reflection + LP acquisition + Burn
-In each trade,<br/> 
-the transaction is taxed a 10% fee, which is split 2 ways.</p>
+In each trade, the transaction is taxed a 10% fee, which is split 2 ways.</p>
           <ul>
             <li>
               <span className="count">1</span>
@@ -307,7 +331,7 @@ previously mentioned BNB and added as a liquidity pair on Pancake Swap.
         <div className="container flex-column">
           <div className="row-1">
             <h1>Safex-007 Protocol</h1>
-            <p>The Safex-007 Protocol is a community driven, fair launched DeFi Token. <br/>Three simple functions occur during each trade: Reflection, LP Acquisition, & Burn.</p>
+            <p>The Safex-007 Protocol is a community driven, fair launched DeFi Token. Three simple functions occur during each trade: Reflection, LP Acquisition, & Burn.</p>
           </div>
           <div className="row-2">
             <a href="javascript:void(0)">
