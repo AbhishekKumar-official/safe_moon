@@ -6,6 +6,7 @@ import rocket from "../images/rocket.svg"
 import barchart from "../images/bar-chart.svg"
 import piechart from "../images/pie-chart.svg"
 import arrowleft from "../images/arrow-left.svg"
+import safespaceBanner from "../images/safespace-banner.gif"
 import "./Home.css"
 class Home extends Component {
   constructor(props) {
@@ -35,25 +36,25 @@ class Home extends Component {
               <img src={logo} />
             </a>
             <ul className={isActiveMenu === true ? "active" : " "}>
+            <li onClick={(e) => this.handleActiveMenu(e)}>
+                <a href="javascript:void(0)">Giveaway</a>
+              </li>
               <li onClick={(e) => this.handleActiveMenu(e)}>
                 <NavLink to="#" activeClassName="active">
                   Home
                 </NavLink>
               </li>
               <li onClick={(e) => this.handleActiveMenu(e)}>
-                <a href="javascript:void(0)">Merch</a>
+                <a href="javascript:void(0)">About</a>
               </li>
               <li onClick={(e) => this.handleActiveMenu(e)}>
-                <a href="javascript:void(0)">White Paper</a>
+                <a href="javascript:void(0)">Roadmap</a>
               </li>
               <li onClick={(e) => this.handleActiveMenu(e)}>
-                <a href="javascript:void(0)">How to Buy</a>
+                <a href="javascript:void(0)">LitePapers</a>
               </li>
               <li onClick={(e) => this.handleActiveMenu(e)}>
-                <a href="javascript:void(0)">Safex-007 Contract</a>
-              </li>
-              <li onClick={(e) => this.handleActiveMenu(e)}>
-                <a href="javascript:void(0)">Our Team</a>
+                <a href="javascript:void(0)">Contact</a>
               </li>
             </ul>
             <div className="d-flex">
@@ -68,13 +69,16 @@ class Home extends Component {
         </nav>
         <div className="hero-section">
           <div>
-            <img src={logo} />
+            <img src={safespaceBanner} />
             <span>
-              <h1>
-                Safex-007
-                <br /> Protocol
-              </h1>
-              <h3>Safely to the Moon</h3>
+              <h1>SafeSpace Protocol</h1>
+              <h2>Safespace is a Frictionless yeild and Liquidity Generation Protocol.</h2>
+              <p>We provide our holders with leading tokenomics within the DeFi space. Our frictionless yield & liquidity generation protocol means that you earn passive income without having to do anything at all inside your wallet.</p>
+              <h3>Safely to the Space</h3>
+              <div>
+                <a href="https://t.me/safespacebsc" target="_blank" class="btn-effect button-blue">Join on Telegram</a>
+                <a href="javascript:void(0)" class="btn-effect ml-1">Buy SAFESPACE</a>
+              </div>
             </span>
           </div>
         </div>
@@ -121,9 +125,32 @@ class Home extends Component {
             </div>
           </div>
         </div>
+        <div className="content about-section">
+          <div className="container">
+            <h1 className="text-center">About</h1>
+            </div>
+            <div className="container container-left">
+            <h4>A revolutionary platform to leverage risk for dynamic yield generating strategies, in combination with frictionless holder incentives and reward structures.</h4>
+            <p>We created $SAFESPACE to provide our holders with leading tokenomics within the DeFi space.
+Our frictionless yield & liquidity generation protocol means that you earn passive income without having to do anything at all.
+At $SAFESPACE, we charge a 10% transaction fee which is split in two ways 5% goes into a locked liquidity pool and 5% is shared amongst our stakeholders.
+This is called a deflationary currency and will earn up to 80% annual yield percentage - exceptionally higher than any traditional savings account.
+</p>
+<h4 className="text-green">Earn</h4>
+<p>Gain $SAFESPACE every time a transaction is completed. We charge a 10% transaction fee; this means 5% goes into a locked liquidity pool and 5% is rewarded to our stakeholders. No need to trade, simply watch your balance increase in real-time.</p>
+<h4 className="text-green">Fees</h4>
+<p>At $SAFESPACE, we charge a 10% transaction fee which is split in two ways. 5% goes into a locked liquidity pool and 5% is shared amongst our stakeholders. This is called a deflationary currency and will earn up to 80% annual yield percentage - exceptionally higher than any traditional savings account.</p>
+<h4 className="text-green">Join</h4>
+<p>We’d love for you to become part of our incredible $SAFESTAR community! We understand the crypto world is an exciting new place, so it’s likely you’re going to want to chat and ask some questions. Our team is always active and happy to answer any queries you may have.</p>
+<ul>
+  <li>Have a question? Ask and speak directly to the dev team.</li>
+  <li>Want to chat with our like-minded community? We love new members!</li>
+</ul>
+          </div>
+        </div>
         <div className="content bg-light text-center">
           <div className="container">
-            <h1>Safex-007 Protocol</h1>
+            <h1>SafeSpace Protocol</h1>
             <p>
               Static Rewards, LP Acquisition, Manual Burn
               <br />
@@ -146,7 +173,7 @@ class Home extends Component {
               <div className="chart-content">
                 <img src={barchart} />
                 <h1>Manual Burns</h1>
-                <p>Sometimes burns matter; sometimes they don’t. A continuous burn on any one protocol can be nice in the early days, however, this means the burn cannot be finite or controlled in any way. Having burns controlled by the team and promoted based on achievements helps to keep the community rewarded and informed. The conditions of the manual burn and the amounts can be advertised and tracked. Safex-007 aims to implement a burn strategy that is beneficial and rewarding for those engaged for the long term. Furthermore, the total number of Safex-007 burned is featured on our readout located on the website which allows for further transparency in identifying the current circulating supply at any given point of time.</p>
+                <p>Sometimes burns matter; sometimes they don’t. A continuous burn on any one protocol can be nice in the early days, however, this means the burn cannot be finite or controlled in any way. Having burns controlled by the team and promoted based on achievements helps to keep the community rewarded and informed. The conditions of the manual burn and the amounts can be advertised and tracked. SafeSpace aims to implement a burn strategy that is beneficial and rewarding for those engaged for the long term. Furthermore, the total number of SafeSpace burned is featured on our readout located on the website which allows for further transparency in identifying the current circulating supply at any given point of time.</p>
               </div>
               <div className="chart-content-two media-screen-none">
                 <div className="row">
@@ -171,7 +198,7 @@ class Home extends Component {
               <div className="chart-content">
                 <img src={piechart} />
                 <h1>Automatic Liquidity Pool (LP)</h1>
-                <p>Automatic LP is the secret sauce of Safex-007. Here we have a function that acts as a two-fold beneficial implementation for holders. First, the contract sucks up tokens from sellers and buyers alike, and adds them to the LP creating a solid price floor. Second, the penalty acts as an arbitrage resistant mechanism that secures the volume of Safex-007 as a reward for the holders. In theory, the added LP creates a stability from the supplied LP by adding the tax to the overall liquidity of the token, thus increasing the tokens overall LP and supporting the price floor of the token. This is different from the burn function of other reflection tokens which is only beneficial in the short term from the granted reduction of supply. As the Safex-007 token LP increases, the price stability mirrors this function with the benefit of a solid price floor and cushion for holders. The goal here is to prevent the larger dips when whales decide to sell their tokens later in the game, which keeps the price from fluctuating as much as if there was no automatic LP function. All of this is an effort to alleviate some of the troubles we have seen with the current DeFi reflection tokens. We are confident that this model and protocol will prevail over the outdated reflection tokens for these reasons.</p>
+                <p>Automatic LP is the secret sauce of SafeSpace. Here we have a function that acts as a two-fold beneficial implementation for holders. First, the contract sucks up tokens from sellers and buyers alike, and adds them to the LP creating a solid price floor. Second, the penalty acts as an arbitrage resistant mechanism that secures the volume of SafeSpace as a reward for the holders. In theory, the added LP creates a stability from the supplied LP by adding the tax to the overall liquidity of the token, thus increasing the tokens overall LP and supporting the price floor of the token. This is different from the burn function of other reflection tokens which is only beneficial in the short term from the granted reduction of supply. As the SafeSpace token LP increases, the price stability mirrors this function with the benefit of a solid price floor and cushion for holders. The goal here is to prevent the larger dips when whales decide to sell their tokens later in the game, which keeps the price from fluctuating as much as if there was no automatic LP function. All of this is an effort to alleviate some of the troubles we have seen with the current DeFi reflection tokens. We are confident that this model and protocol will prevail over the outdated reflection tokens for these reasons.</p>
                 <div className="arrow-left">
                   <img src={arrowleft} />
                 </div>
@@ -199,8 +226,8 @@ class Home extends Component {
         </div>
         <div className="content text-center content-fuctions">
           <div className="container">
-            <h1>Safex-007 Protocol</h1>
-            <p>Safex-007 employs 3 simple functions: Reflection + LP acquisition + Burn In each trade, the transaction is taxed a 10% fee, which is split 2 ways.</p>
+            <h1>SafeSpace Protocol</h1>
+            <p>SafeSpace employs 3 simple functions: Reflection + LP acquisition + Burn In each trade, the transaction is taxed a 10% fee, which is split 2 ways.</p>
             <ul>
               <li>
                 <span className="count">1</span>
@@ -208,7 +235,7 @@ class Home extends Component {
               </li>
               <li>
                 <span className="count">2</span>
-                5% fee is split 50/50 half of which is sold by the contract into BNB, while the other half of the Safex-007 tokens are paired automatically with the previously mentioned BNB and added as a liquidity pair on Pancake Swap.
+                5% fee is split 50/50 half of which is sold by the contract into BNB, while the other half of the SafeSpace tokens are paired automatically with the previously mentioned BNB and added as a liquidity pair on Pancake Swap.
               </li>
             </ul>
           </div>
@@ -302,7 +329,7 @@ class Home extends Component {
                   <p>
                     <b>The Initial Push</b>
                   </p>
-                  <p>The Whitebit tokenomics integration will be completed along with the completion of the Safex-007 App, Wallet, and Game(s). The Bitmart integration with tokenomics will also be completed in this quarter. We will begin architecting the NFT Exchange as well as video-game integrations. We will be integrating Safex-007 with African Markets in addition to setting up a Charity drive and charity vote. We will be exploring other exchanges (i.e. Binance) and begin architecting the Safex-007 Exchange. We will be expanding the team by 35% and establish a UK/Ireland office. We will be architecting a crypto educational app as well as onboarding new partners.</p>
+                  <p>The Whitebit tokenomics integration will be completed along with the completion of the SafeSpace App, Wallet, and Game(s). The Bitmart integration with tokenomics will also be completed in this quarter. We will begin architecting the NFT Exchange as well as video-game integrations. We will be integrating SafeSpace with African Markets in addition to setting up a Charity drive and charity vote. We will be exploring other exchanges (i.e. Binance) and begin architecting the SafeSpace Exchange. We will be expanding the team by 35% and establish a UK/Ireland office. We will be architecting a crypto educational app as well as onboarding new partners.</p>
                 </div>
               </li>
               <li className="timeline_margin">
@@ -318,7 +345,7 @@ class Home extends Component {
                   <p>
                     <b>Holding the Line</b>
                   </p>
-                  <p>We will finish our crypto educational app and begin our own charity project. We will begin a community listing donation raise for several exchanges (i.e. Coinbase, Binance, Kraken). We will finish our NFT exchange and release our first video game with Safex-007 integrated. We will be expanding the team by 25% and do a community meetup (pending covid restrictions). We will also be integrating with other large exchanges (I.e. Binance, Mandala).</p>
+                  <p>We will finish our crypto educational app and begin our own charity project. We will begin a community listing donation raise for several exchanges (i.e. Coinbase, Binance, Kraken). We will finish our NFT exchange and release our first video game with SafeSpace integrated. We will be expanding the team by 25% and do a community meetup (pending covid restrictions). We will also be integrating with other large exchanges (I.e. Binance, Mandala).</p>
                 </div>
               </li>
               <li className="timeline_margin timeline-inverted">
@@ -334,7 +361,7 @@ class Home extends Component {
                   <p>
                     <b>To the Moon!</b>
                   </p>
-                  <p>We will finish the Safex-007 Exchange and our charity project. We will finish integrations with our first African market and begin the next integrations with additional African markets. We will create an African based Safex-007 Office and begin hiring in those markets to create jobs. We will be taking donations for our next charity project and begin a vote on the next project as well. We will be establishing a Safex-007 Scholarship in this quarter as well.</p>
+                  <p>We will finish the SafeSpace Exchange and our charity project. We will finish integrations with our first African market and begin the next integrations with additional African markets. We will create an African based SafeSpace Office and begin hiring in those markets to create jobs. We will be taking donations for our next charity project and begin a vote on the next project as well. We will be establishing a SafeSpace Scholarship in this quarter as well.</p>
                 </div>
               </li>
             </ul>
@@ -344,8 +371,8 @@ class Home extends Component {
           <div className="social">
             <div className="container flex-column">
               <div className="row-1">
-                <h1>Safex-007 Protocol</h1>
-                <p>The Safex-007 Protocol is a community driven, fair launched DeFi Token. Three simple functions occur during each trade: Reflection, LP Acquisition, & Burn.</p>
+                <h1>SafeSpace Protocol</h1>
+                <p>The SafeSpace Protocol is a community driven, fair launched DeFi Token. Three simple functions occur during each trade: Reflection, LP Acquisition, & Burn.</p>
               </div>
               <div className="row-2">
                 <a href="javascript:void(0)">
@@ -383,7 +410,7 @@ class Home extends Component {
           </div>
           <div className="links">
             <div className="container">
-              © 2021 Safex-007 | All Rights Reserved.
+              © 2021 SafeSpace | All Rights Reserved.
               <ul>
                 <li>
                   <a href="javascript:void(0)">Branding</a>

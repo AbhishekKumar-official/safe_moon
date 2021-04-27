@@ -43,13 +43,17 @@ nav ul li a.active{
     height: calc(100vh - 125px);
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 .hero-section img{
-    width: 250px;
+    width: 37%;
+    right: 0;
+    position: absolute;
+    top: 0;
 }
 .hero-section h1{
     color: #324D6D;
-    margin-bottom: 0;
+    margin-bottom: 15px;
     font-size: 3rem;
     line-height: 54px;
 }
@@ -60,17 +64,30 @@ nav ul li a.active{
     text-transform: uppercase;
     font-size: 15px;
     padding-left: 3.1px;
+    margin-bottom: 3rem;
 }
 .hero-section div{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     width: 100%;
 }
 .hero-section div span{
     display: flex;
     flex-direction: column;
     padding-left: 3rem;
+    width: 60%;
+}
+.hero-section h2{
+    font-size: 20px;
+    color: #324D6D;
+    font-weight: normal;
+    margin: 0;
+}
+.hero-section p{
+    font-size: 15px;
+    color: #324D6D;
+    line-height: 26px;
 }
 .live-chart{
     display: flex;
@@ -145,6 +162,14 @@ nav ul li a.active{
     font-size: 14px;
     margin-top: 10px;
     line-height: 26px;
+}
+.content .container h4{
+    font-size: 20px;
+    color: #324D6D;
+    font-weight: normal;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    line-height: 32px;
 }
 .content-fuctions .container p{ width: 51%; }
 .content .container.flex-content{
@@ -563,6 +588,43 @@ footer .links .container ul li a{
 }
 .btn-media-screen{ display: none; }
 .media-screen-block{ display: none; }
+.text-left{ text-align: left; }
+.about-section .container-left{ align-items: baseline; }
+.text-green{ color: #5FCDA4 !important; }
+.about-section .container-left ul{ 
+    flex-direction: column;
+    padding-left: 15px;
+    margin-top: 0;
+    list-style: circle;
+ }
+.about-section .container-left li{
+    width: 100% !important;
+    border: none !important;
+    margin: 0;
+    align-items: baseline !important;
+    padding: 5px !important;
+    display: list-item !important;
+}
+.ml-1{ margin-left: 1rem; }
+.hero-section a{
+    color: #ffffff;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    height: 40px;
+    transition: all ease .5s;
+    background-color: #5FCDA4;
+}
+.hero-section a.button-blue{ background-color: #5FA8ED; }
+.hero-section a:hover{
+    transform: scale(1.1);
+    transition: all ease .5s;
+}
 
 @media only screen and (max-width: 1250px){
     .live-chart span{ width: 236px; }

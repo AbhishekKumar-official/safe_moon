@@ -5,7 +5,7 @@ class Header extends Component {
     return (
       <header>
         <div className="container">
-          THE OFFICIAL HOME OF safex-007
+          THE OFFICIAL HOME OF SafeSpace
         </div>
       </header>
     )
