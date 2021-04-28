@@ -496,6 +496,7 @@ nav ul li a.active{
 }
 .timeline-ul > li > .timeline-panel p{
     margin-bottom: 0;
+    line-height: 30px;
 }
 .timeline-ul > li > .timeline-panel:before {
     border-color: rgba(0, 0, 0, 0) #f9f9f9;

@@ -311,9 +311,12 @@ This is called a deflationary currency and will earn up to 80% annual yield perc
                     <span>Q1</span>2021
                   </div>
                   <p>
-                    <b>Protocol Initialized</b>
+                    Research & Design<br/>
+                    Smart Contract Building<br/>
+                    Website Design<br/>
+                    Team Building<br/>
+                    Partnership with Marketing Firms
                   </p>
-                  <p>We have successfully onboarded and confirmed a DogeCoin trading pair with Bibipom. We have also successfully begun integration process with WhiteBit [Imminent] and began legal paperwork with Bitmart. Our team size has doubled and our marketing campaign has begun.</p>
                 </div>
               </li>
               <li className="timeline_margin timeline-inverted">
@@ -327,9 +330,16 @@ This is called a deflationary currency and will earn up to 80% annual yield perc
                     <span>Q2</span>2021
                   </div>
                   <p>
-                    <b>The Initial Push</b>
+                    Token Generation Event<br/>
+                    PancakeSwap Listing<br/>
+                    Lock liquidity on Unicrypt<br/>
+                    Partnership with Audit Firms<br/>
+                    Whitepaper<br/>
+                    Listings on Coingecko, CoinMarketCap, Blockfolio, Delta & More<br/>
+                    CEX Listings<br/>
+                    Building IDO Platform<br/>
+                    ChainLink Integration
                   </p>
-                  <p>The Whitebit tokenomics integration will be completed along with the completion of the SafeSpace App, Wallet, and Game(s). The Bitmart integration with tokenomics will also be completed in this quarter. We will begin architecting the NFT Exchange as well as video-game integrations. We will be integrating SafeSpace with African Markets in addition to setting up a Charity drive and charity vote. We will be exploring other exchanges (i.e. Binance) and begin architecting the SafeSpace Exchange. We will be expanding the team by 35% and establish a UK/Ireland office. We will be architecting a crypto educational app as well as onboarding new partners.</p>
                 </div>
               </li>
               <li className="timeline_margin">
@@ -343,25 +353,12 @@ This is called a deflationary currency and will earn up to 80% annual yield perc
                     <span>Q3</span>2021
                   </div>
                   <p>
-                    <b>Holding the Line</b>
+                    Top Tier CEX Listings<br/>
+                    ICO Launches<br/>
+                    Cross-chain IDO platform<br/>
+                    Partnership Rollout<br/>
+                    Community Growth
                   </p>
-                  <p>We will finish our crypto educational app and begin our own charity project. We will begin a community listing donation raise for several exchanges (i.e. Coinbase, Binance, Kraken). We will finish our NFT exchange and release our first video game with SafeSpace integrated. We will be expanding the team by 25% and do a community meetup (pending covid restrictions). We will also be integrating with other large exchanges (I.e. Binance, Mandala).</p>
-                </div>
-              </li>
-              <li className="timeline_margin timeline-inverted">
-                <div class="timeline-badge timeline-badge-4" data-placement="right" data-toggle="tooltip">
-                  <svg class="svg-inline--fa fa-rocket-launch fa-w-16 fa-lg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="rocket-launch" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-                    <path fill="currentColor" d="M505.16405,19.29688c-1.176-5.4629-6.98736-11.26563-12.45106-12.4336C460.61647,0,435.46433,0,410.41962,0,307.2013,0,245.30155,55.20312,199.09162,128H94.88878c-16.29733,0-35.599,11.92383-42.88913,26.49805L2.57831,253.29688A28.39645,28.39645,0,0,0,.06231,264a24.008,24.008,0,0,0,24.00353,24H128.01866a96.00682,96.00682,0,0,1,96.01414,96V488a24.008,24.008,0,0,0,24.00353,24,28.54751,28.54751,0,0,0,10.7047-2.51562l98.747-49.40626c14.56074-7.28515,26.4746-26.56445,26.4746-42.84374V312.79688c72.58882-46.3125,128.01886-108.40626,128.01886-211.09376C512.07522,76.55273,512.07522,51.40234,505.16405,19.29688ZM384.05637,168a40,40,0,1,1,40.00589-40A40.02,40.02,0,0,1,384.05637,168ZM35.68474,352.06641C9.82742,377.91992-2.94985,442.59375.57606,511.41016c69.11565,3.55859,133.61147-9.35157,159.36527-35.10547,40.28913-40.2793,42.8774-93.98633,6.31147-130.54883C129.68687,309.19727,75.97,311.78516,35.68474,352.06641Zm81.63312,84.03125c-8.58525,8.584-30.08256,12.88672-53.11915,11.69922-1.174-22.93555,3.08444-44.49219,11.70289-53.10938,13.42776-13.42578,31.33079-14.28906,43.51813-2.10352C131.60707,404.77148,130.74562,422.67188,117.31786,436.09766Z"></path>
-                  </svg>
-                </div>
-                <div class="timeline-panel timeline-panel-4">
-                  <div class="head">
-                    <span>Q4</span>2021
-                  </div>
-                  <p>
-                    <b>To the Moon!</b>
-                  </p>
-                  <p>We will finish the SafeSpace Exchange and our charity project. We will finish integrations with our first African market and begin the next integrations with additional African markets. We will create an African based SafeSpace Office and begin hiring in those markets to create jobs. We will be taking donations for our next charity project and begin a vote on the next project as well. We will be establishing a SafeSpace Scholarship in this quarter as well.</p>
                 </div>
               </li>
             </ul>
