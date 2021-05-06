@@ -84,7 +84,7 @@ class Home extends Component {
         </nav>
         <div className="hero-section">
           <div>
-            <video id="herovideo" width="320" height="240" controls loop autoPlay>
+            <video id="herovideo" width="320" height="240" loop autoPlay>
               <source src={herovideo} type="video/mp4"></source>
               <source src="movie.ogg" type="video/ogg"></source>
               Your browser does not support the video tag.
