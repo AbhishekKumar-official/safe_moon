@@ -8,7 +8,7 @@ export class App extends Component {
   render() {
     return (
       <div>
-        <Particles
+        {/* <Particles
           id="particles-js"
           params={{
             particles: {
@@ -36,7 +36,7 @@ export class App extends Component {
               },
             },
           }}
-        />
+        /> */}
         <div className="wrapper">
           <Header />
           <Switch>

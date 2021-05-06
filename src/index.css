@@ -6,12 +6,12 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ffffff;
+  background-color: #1a1a1a;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 14px;
-  color: #ffffff;
+  color: #c0c0c0;
 }
 .container{
   width: 90%;
@@ -30,14 +30,14 @@ button{
   letter-spacing: 1px;
   height: 40px;
   transition: all ease .5s;
-  background-color: #5FCDA4;
+  background: linear-gradient(to right, #f1b90c, #F0B90B);
 }
 button:hover{
   transform: scale(1.1);
   transition: all ease .5s;
 }
 a{
-  color: #324D6D;
+  color: #c0c0c0;
   text-decoration: none;
 }
 .btn-effect {

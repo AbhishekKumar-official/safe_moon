@@ -8,6 +8,10 @@ import piechart from "../images/pie-chart.svg"
 import arrowleft from "../images/arrow-left.svg"
 import safespaceBanner from "../images/safespace-banner.gif"
 import medium from "../images/medium.png"
+import roadmapone from "../images/roadmap-1.png"
+import roadmaptwo from "../images/roadmap-2.png"
+import roadmapthree from "../images/roadmap-3.png"
+import herovideo from "../images/hero-section-video.mp4"
 import "./Home.css"
 class Home extends Component {
   constructor(props) {
@@ -16,6 +20,12 @@ class Home extends Component {
     this.state = {
       isActiveMenu: false,
     }
+  }
+
+  componentDidMount() {
+    var vid = document.getElementById("herovideo")
+    vid.autoplay = true
+    vid.load()
   }
 
   handleActiveMenu = () => {
@@ -32,30 +42,35 @@ class Home extends Component {
     return (
       <>
         <nav>
-          <div className="container">
+          <div className="container" id="nav-container">
             <a href="javascript:void(0)" className="logo">
               <img src={logo} />
             </a>
             <ul className={isActiveMenu === true ? "active" : " "}>
-              <li onClick={(e) => this.handleActiveMenu(e)}>
-                <a href="javascript:void(0)">Giveaway</a>
-              </li>
-              <li onClick={(e) => this.handleActiveMenu(e)}>
-                <NavLink to="#" activeClassName="active">
+              <li className="nav-link" onClick={(e) => this.handleActiveMenu(e)}>
+                <a href="#" className="nav">
                   Home
-                </NavLink>
+                </a>
               </li>
-              <li onClick={(e) => this.handleActiveMenu(e)}>
-                <a href="javascript:void(0)">About</a>
+              <li className="nav-link-about" onClick={(e) => this.handleActiveMenu(e)}>
+                <a href="#about-section" className="nav-about">
+                  About
+                </a>
               </li>
-              <li onClick={(e) => this.handleActiveMenu(e)}>
-                <a href="javascript:void(0)">Roadmap</a>
+              <li className="nav-link-roadmap" onClick={(e) => this.handleActiveMenu(e)}>
+                <a href="#roadmap-section" className="nav-roadmap">
+                  Roadmap
+                </a>
               </li>
-              <li onClick={(e) => this.handleActiveMenu(e)}>
-                <a href="javascript:void(0)">LitePapers</a>
+              <li className="nav-link" onClick={(e) => this.handleActiveMenu(e)}>
+                <a href="#about-section" className="nav">
+                  LitePapers
+                </a>
               </li>
-              <li onClick={(e) => this.handleActiveMenu(e)}>
-                <a href="javascript:void(0)">Contact</a>
+              <li className="nav-link" onClick={(e) => this.handleActiveMenu(e)}>
+                <a href="#about-section" className="nav">
+                  Giveaway
+                </a>
               </li>
             </ul>
             <div className="d-flex">
@@ -70,7 +85,9 @@ class Home extends Component {
         </nav>
         <div className="hero-section">
           <div>
-            <img src={safespaceBanner} />
+            <video id="herovideo" autoplay loop>
+              <source src={herovideo} type="video/mp4" />
+            </video>
             <span>
               <h1>SafeSpace Protocol</h1>
               <h2>Safespace is a Frictionless yeild and Liquidity Generation Protocol.</h2>
@@ -130,17 +147,17 @@ class Home extends Component {
             </div>
           </div>
         </div>
-        <div className="content about-section">
+        <div className="content about-section" id="about-section">
           <div className="container">
             <h1 className="text-center">About</h1>
           </div>
           <div className="container container-left">
             <h4>A revolutionary platform to leverage risk for dynamic yield generating strategies, in combination with frictionless holder incentives and reward structures.</h4>
-            <p>We created $SAFESPACE to provide our holders with leading tokenomics within the DeFi space. Our frictionless yield & liquidity generation protocol means that you earn passive income without having to do anything at all. At $SAFESPACE, we charge a 10% transaction fee which is split in two ways 5% goes into a locked liquidity pool and 5% is shared amongst our stakeholders. This is called a deflationary currency and will earn up to 80% annual yield percentage - exceptionally higher than any traditional savings account.</p>
+            <p>We created $SAFESPACE to provide our holders with leading tokenomics within the DeFi space. Our frictionless yield & liquidity generation protocol means that you earn passive income without having to do anything at all. At $SAFESPACE, we charge a 6% transaction fee which is split in two ways 3% goes into a locked liquidity pool and 3% is shared amongst our stakeholders. This is called a deflationary currency and will earn up to 80% annual yield percentage - exceptionally higher than any traditional savings account.</p>
             <h4 className="text-green">Earn</h4>
-            <p>Gain $SAFESPACE every time a transaction is completed. We charge a 10% transaction fee; this means 5% goes into a locked liquidity pool and 5% is rewarded to our stakeholders. No need to trade, simply watch your balance increase in real-time.</p>
+            <p>Gain $SAFESPACE every time a transaction is completed. We charge a 6% transaction fee; this means 3% goes into a locked liquidity pool and 3% is rewarded to our stakeholders. No need to trade, simply watch your balance increase in real-time.</p>
             <h4 className="text-green">Fees</h4>
-            <p>At $SAFESPACE, we charge a 10% transaction fee which is split in two ways. 5% goes into a locked liquidity pool and 5% is shared amongst our stakeholders. This is called a deflationary currency and will earn up to 80% annual yield percentage - exceptionally higher than any traditional savings account.</p>
+            <p>At $SAFESPACE, we charge a 6% transaction fee which is split in two ways. 3% goes into a locked liquidity pool and 3% is shared amongst our stakeholders. This is called a deflationary currency and will earn up to 80% annual yield percentage - exceptionally higher than any traditional savings account.</p>
             <h4 className="text-green">Join</h4>
             <p>We’d love for you to become part of our incredible $SAFESTAR community! We understand the crypto world is an exciting new place, so it’s likely you’re going to want to chat and ask some questions. Our team is always active and happy to answer any queries you may have.</p>
             <ul>
@@ -183,14 +200,28 @@ class Home extends Component {
                     <small>Total Supply</small>
                   </span>
                   <span>
-                    223,000,000,000,000
-                    <small>Burned Dev Tokens</small>
+                    50% : 500,000,000,000,000
+                    <small>Burn & Reward</small>
                   </span>
                 </div>
                 <div className="row">
                   <span>
-                    777,000,000,000,000
-                    <small>Fair Launch Supply</small>
+                    20% : 200,000,000,000,000
+                    <small>liquidity add</small>
+                  </span>
+                  <span>
+                    7% : 70,000,000,000,000
+                    <small>Innovation Fund</small>
+                  </span>
+                </div>
+                <div className="row">
+                  <span>
+                    8% : 80,000,000,000,000
+                    <small>Development Fund</small>
+                  </span>
+                  <span>
+                    4% : 40,000,000,000,000
+                    <small>Marketing Fund</small>
                   </span>
                 </div>
               </div>
@@ -218,7 +249,7 @@ class Home extends Component {
                 <div className="row">
                   <span>
                     777,000,000,000,000
-                    <small>Fair Launch Supply</small>
+                    <small>Launch Supply</small>
                   </span>
                 </div>
               </div>
@@ -228,15 +259,15 @@ class Home extends Component {
         <div className="content text-center content-fuctions">
           <div className="container">
             <h1>SafeSpace Protocol</h1>
-            <p>SafeSpace employs 3 simple functions: Reflection + LP acquisition + Burn In each trade, the transaction is taxed a 10% fee, which is split 2 ways.</p>
+            <p>SafeSpace employs 3 simple functions: Reflection + LP acquisition + Burn In each trade, the transaction is taxed a 6% fee, which is split 2 ways.</p>
             <ul>
               <li>
                 <span className="count">1</span>
-                5% fee = redistributed to all existing holders
+                3% fee = redistributed to all existing holders
               </li>
               <li>
                 <span className="count">2</span>
-                5% fee is split 50/50 half of which is sold by the contract into BNB, while the other half of the SafeSpace tokens are paired automatically with the previously mentioned BNB and added as a liquidity pair on Pancake Swap.
+                3% fee is split 50/50 half of which is sold by the contract into BNB, while the other half of the SafeSpace tokens are paired automatically with the previously mentioned BNB and added as a liquidity pair on Pancake Swap.
               </li>
             </ul>
           </div>
@@ -262,7 +293,7 @@ class Home extends Component {
                   <svg class="svg-inline--fa fa-balance-scale fa-w-20 fa-3x" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="balance-scale" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg="">
                     <path fill="currentColor" d="M634.4 279.09L525.35 103.12C522.18 98.38 517.09 96 512 96s-10.18 2.38-13.35 7.12L389.6 279.09c-3.87 5.78-6.09 12.72-5.51 19.64C389.56 364.4 444.74 416 512 416s122.44-51.6 127.91-117.27c.58-6.92-1.64-13.86-5.51-19.64zM512 384c-41.58 0-77.55-27.13-90.78-64h181.2C589 357.23 553.28 384 512 384zm-90.27-96l90.31-145.76L602.98 288H421.73zM536 480H336V125.74c27.56-7.14 48-31.95 48-61.74h152c4.42 0 8-3.58 8-8V40c0-4.42-3.58-8-8-8H374.89c-.15-.26-4.37-11.11-19.11-21.07C345.57 4.03 333.25 0 320 0s-25.57 4.03-35.78 10.93c-14.74 9.96-18.96 20.81-19.11 21.07H104c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h152c0 29.79 20.44 54.6 48 61.74V480H104c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h432c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zM288 64c0-17.67 14.33-32 32-32s32 14.33 32 32-14.33 32-32 32-32-14.33-32-32zm-32.09 234.73c.58-6.92-1.64-13.86-5.51-19.64L141.35 103.12C138.18 98.38 133.09 96 128 96s-10.18 2.38-13.35 7.12L5.6 279.09c-3.87 5.78-6.09 12.72-5.51 19.64C5.56 364.4 60.74 416 128 416s122.44-51.6 127.91-117.27zM128.04 142.24L218.98 288H37.73l90.31-145.76zM37.22 320h181.2C205 357.23 169.28 384 128 384c-41.58 0-77.55-27.13-90.78-64z"></path>
                   </svg>
-                  Fair launch on DxSale
+                  Launch on DxSale
                 </div>
                 <div className="foot">
                   <span>Step 2</span>
@@ -293,7 +324,7 @@ class Home extends Component {
             </div>
           </div>
         </div>
-        <div className="content">
+        <div className="content" id="roadmap-section">
           <div className="container">
             <h1>Road Map</h1>
           </div>
@@ -322,6 +353,9 @@ class Home extends Component {
                     <br />
                     Partnership with Marketing Firms
                   </p>
+                </div>
+                <div className="timeline-panel-img-one">
+                  <img src={roadmapone} />
                 </div>
               </li>
               <li className="timeline_margin timeline-inverted">
@@ -354,6 +388,9 @@ class Home extends Component {
                     ChainLink Integration
                   </p>
                 </div>
+                <div className="timeline-panel-img-two">
+                  <img src={roadmaptwo} />
+                </div>
               </li>
               <li className="timeline_margin">
                 <div class="timeline-badge timeline-badge-3" data-placement="right" data-toggle="tooltip">
@@ -377,6 +414,9 @@ class Home extends Component {
                     Community Growth
                   </p>
                 </div>
+                <div className="timeline-panel-img-three">
+                  <img src={roadmapthree} />
+                </div>
               </li>
             </ul>
           </div>
@@ -386,7 +426,7 @@ class Home extends Component {
             <div className="container flex-column">
               <div className="row-1">
                 <h1>SafeSpace Protocol</h1>
-                <p>The SafeSpace Protocol is a community driven, fair launched DeFi Token. Three simple functions occur during each trade: Reflection, LP Acquisition, & Burn.</p>
+                <p>The SafeSpace Protocol is a community driven, launched DeFi Token. Three simple functions occur during each trade: Reflection, LP Acquisition, & Burn.</p>
               </div>
               <div className="row-2">
                 <a href="javascript:void(0)">
