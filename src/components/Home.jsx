@@ -24,7 +24,6 @@ class Home extends Component {
 
   componentDidMount() {
     var vid = document.getElementById("herovideo")
-    vid.autoplay = true
     vid.load()
   }
 
@@ -85,9 +84,14 @@ class Home extends Component {
         </nav>
         <div className="hero-section">
           <div>
-            <video id="herovideo" autoplay loop>
-              <source src={herovideo} type="video/mp4" />
+            <video id="herovideo" width="320" height="240" controls loop autoPlay>
+              <source src={herovideo} type="video/mp4"></source>
+              <source src="movie.ogg" type="video/ogg"></source>
+              Your browser does not support the video tag.
             </video>
+            {/* <video id="herovideo" autoplay loop>
+              <source src={herovideo} type="video/mp4" />
+            </video> */}
             <span>
               <h1>SafeSpace Protocol</h1>
               <h2>Safespace is a Frictionless yeild and Liquidity Generation Protocol.</h2>
